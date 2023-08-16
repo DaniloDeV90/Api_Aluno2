@@ -7,6 +7,7 @@ module.exports = {
     port: 3306,
     username:"root",
     password: "dfgdf11234",
+    database:"Escola",
     define: {
         timeStamps: true
     },
