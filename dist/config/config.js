@@ -2,19 +2,22 @@
 
 
 module.exports = {
-    host: process.env.DATABASE_HOST,
-    dialect: process.env.DATABASE_NAME_DATA,
-  
-    port: process.env.DATABASE_PORT,
-    username: process.env.DATABASE_USERNAME,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
+    host: "ep-ancient-breeze-539214.us-east-2.aws.neon.tech",
+    dialect: "postgres",
+    
+    port:  5432,
+    username: "DaniloDeV90",
+    password:"IK3F5ohOucaj",
+    database: "bd_Alunos",
     define: {
         timesStamps: true
     },
     dialectOptions: {
-        connectTimeout: 60000
+        connectTimeout: 60000,
+        ssl: true,
+        sslmode: "require"
       },
+     
 }
 
 
