@@ -10,7 +10,7 @@ module.exports = {
     port: 3306,
     username:"root",
     password: "dfgdf11234",
-    database:process.env.DATABASE_NAME,
+    database:"Escola",
     define: {
         timesStamps: true
     },
