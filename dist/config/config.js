@@ -9,7 +9,7 @@ module.exports = {
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
     define: {
-        timestamps: true
+        timesStamps: true
     },
     dialectOptions: {
         connectTimeout: 60000
