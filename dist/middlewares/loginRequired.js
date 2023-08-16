@@ -1,7 +1,7 @@
-const jwt = require("jsonwebtoken")
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});const jwt = require("jsonwebtoken")
 const User = require("../models/User")
 
-export default async (req, res, next) => {
+exports. default = async (req, res, next) => {
 
 
     const { authorization } = req.headers

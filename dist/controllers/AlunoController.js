@@ -1,4 +1,4 @@
-const Aluno = require("../models/Aluno")
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});const Aluno = require("../models/Aluno")
 const Foto  = require ("../models/Fotos")
 class AlunoController {
 
@@ -92,4 +92,4 @@ class AlunoController {
 
 }
 
-export default new AlunoController();
+exports. default = new AlunoController();

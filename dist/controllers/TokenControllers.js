@@ -1,4 +1,4 @@
-const User = require("../models/User")
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});const User = require("../models/User")
 const jwt = require("jsonwebtoken")
 const bcryptjs = require("bcryptjs")
 
@@ -34,4 +34,4 @@ class TokenController {
     }
 }
 
-export default new TokenController();  
+exports. default = new TokenController();  

@@ -1,4 +1,4 @@
-const User = require("../models/User")
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});const User = require("../models/User")
 
 
 
@@ -82,4 +82,4 @@ class UserController {
     }
 }
 
-export default new UserController();
+exports. default = new UserController();

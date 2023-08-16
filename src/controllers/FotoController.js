@@ -1,8 +1,8 @@
 const multer = require("multer")
-import multerConfig from "../../config/multerConfig";
+import multerConfig from "../config/multerConfig";
 
 const upload = multer(multerConfig).single("foto")
-import Foto from "../../models/Fotos"
+import Foto from "../models/Fotos"
 
 
 class FotoController {

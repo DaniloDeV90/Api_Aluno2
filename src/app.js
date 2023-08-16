@@ -5,11 +5,12 @@ dotenv.config ()
 
 
 const  {resolve} = require ("path")
-import tokenRouters from "./src/routes/TokensRouters"
-import userRouter from "./src/routes/usersRoutes"
+import tokenRouters from "./routes/TokensRouters"
+import userRouter from "./routes/usersRoutes"
 require ("./config/Associations")
-import AlunosRoutes from "./src/routes/AlunosRoutes";
-import fotoRoutes from "./src/routes/FotosRoutes";
+import AlunosRoutes from "./routes/AlunosRoutes";
+import fotoRoutes from "./routes/FotosRoutes";
+import homerRouters from "./routes/HomeRoutes";
 class App {
     constructor() {
         this.app = express();
@@ -26,6 +27,7 @@ class App {
     }
 
     routes() {
+        this.app.use ("/", homerRouters)
         this.app.use ("/tokens/", tokenRouters)
         this.app.use ("/users/", userRouter)
         this.app.use ("/aluno/", AlunosRoutes)
