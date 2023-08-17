@@ -3,7 +3,8 @@ import dotenv from "dotenv"
 dotenv.config ()
 
 
-
+import cors from "cors"
+import helmet from "helmet"
 const  {resolve} = require ("path")
 import tokenRouters from "./routes/TokensRouters"
 import userRouter from "./routes/usersRoutes"
@@ -11,6 +12,10 @@ require ("./config/Associations")
 import AlunosRoutes from "./routes/AlunosRoutes";
 import fotoRoutes from "./routes/FotosRoutes";
 import homerRouters from "./routes/HomeRoutes";
+
+
+
+
 class App {
     constructor() {
         this.app = express();
@@ -20,6 +25,8 @@ class App {
     }
 
     middlewares() {
+        this.app.use (cors ())
+        this.app.use (helmet ())
         this.app.use(express.urlencoded({ extended: true }))
         this.app.use(express.json())
         this.app.use (express.static (resolve (__dirname, "uploads")))
