@@ -9,7 +9,7 @@ const verifyToken = async (password, hash) => {
 
 class TokenController {
     async store(req, res) {
-
+     try {
         const { email = '', password = '' } = req.body;
         console.log(email, password)
 
@@ -31,6 +31,10 @@ class TokenController {
 
         })
         res.status(200).json({ token })
+     } catch (e) {
+         res.status (404).json (e)
+     }
+       
     }
 }
 
