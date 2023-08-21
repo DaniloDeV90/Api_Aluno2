@@ -26,13 +26,10 @@ class TokenController {
         console.log (process.env.TOKEN_EXPIRATION )
         const { id } = user;
         const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET, {
-            expiresIn:process.env.TOKEN_EXPIRATION
-            ,
-
-        })
+            expiresIn:process.env.TOKEN_EXPIRATION })
         res.status(200).json({ token })
      } catch (e) {
-         res.status (404).json (e)
+         res.status (404).json ({e})
      }
        
     }
