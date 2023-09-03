@@ -1,3 +1,3 @@
 # Api_Aluno2
 
-UMA API
+Api de cadastro de alunos no padrão REST 
